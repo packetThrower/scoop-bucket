@@ -1,0 +1,50 @@
+{
+    "version": "3.2.0",
+    "description": "Network switch port discovery via CDP / LLDP / MNDP",
+    "homepage": "https://github.com/packetThrower/PortFinder",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v3.2.0/PortFinder_3.2.0_x64-setup.exe",
+            "hash": "cf60caf450644638a6aff22ce9ad562261ebe4fbadb09789984f9ca521601cb6"
+        },
+        "arm64": {
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v3.2.0/PortFinder_3.2.0_arm64-setup.exe",
+            "hash": "b3426343ce80e1eafdde5d7f316c59a25d47debc32dcc66f2e343bc6cfc594bc"
+        }
+    },
+    "installer": {
+        "script": [
+            "Start-Process -Wait -FilePath \"$dir\\$fname\" -ArgumentList @('/S', \"/D=$dir\")",
+            "Remove-Item \"$dir\\$fname\" -Force"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
+        ]
+    },
+    "bin": "PortFinder.exe",
+    "shortcuts": [
+        [
+            "PortFinder.exe",
+            "PortFinder"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/packetThrower/PortFinder/releases/download/v$version/PortFinder_$version_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/packetThrower/PortFinder/releases/download/v$version/PortFinder_$version_arm64-setup.exe"
+            }
+        }
+    },
+    "notes": [
+        "Packet capture on Windows requires Npcap.",
+        "Get it from https://npcap.com/#download and tick",
+        "'Allow non-administrators to capture' during install."
+    ]
+}
