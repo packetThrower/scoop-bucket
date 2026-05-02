@@ -1,0 +1,51 @@
+{
+    "version": "0.9.2",
+    "description": "Cross-platform serial terminal for network devices",
+    "homepage": "https://github.com/packetThrower/Baudrun",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.2/Baudrun_0.9.2_x64-setup.exe",
+            "hash": "5bbe8b17ca659ce7ccc69ba2d2f58aba438d245aed0c82ee5b39bdde657c05a4"
+        },
+        "arm64": {
+            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.2/Baudrun_0.9.2_arm64-setup.exe",
+            "hash": "7d6196afbdc429cf5c42a5cb1a778efb83f69d03118b1e5b520e2d4b478715b1"
+        }
+    },
+    "installer": {
+        "script": [
+            "Start-Process -Wait -FilePath \"$dir\\$fname\" -ArgumentList @('/S', \"/D=$dir\")",
+            "Remove-Item \"$dir\\$fname\" -Force"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
+        ]
+    },
+    "bin": "Baudrun.exe",
+    "shortcuts": [
+        [
+            "Baudrun.exe",
+            "Baudrun"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/packetThrower/Baudrun/releases/download/v$version/Baudrun_$version_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/packetThrower/Baudrun/releases/download/v$version/Baudrun_$version_arm64-setup.exe"
+            }
+        }
+    },
+    "notes": [
+        "USB-serial adapter compatibility varies by chipset; some need a",
+        "vendor driver while others work via Baudrun's bundled libusb",
+        "backend. See the support matrix at",
+        "https://github.com/packetThrower/Baudrun/blob/main/docs/ADAPTERS.md"
+    ]
+}
