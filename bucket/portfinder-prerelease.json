@@ -1,0 +1,57 @@
+{
+    "version": "3.3.0-alpha.2",
+    "description": "Network switch port discovery via CDP / LLDP / MNDP (pre-release channel)",
+    "homepage": "https://github.com/packetThrower/PortFinder",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v3.3.0-alpha.2/PortFinder_3.3.0-alpha.2_x64-setup.exe",
+            "hash": "7f37336cc986a934ee758d089af29d17aea9c83e179e93051d54e5eae1fa9d68"
+        },
+        "arm64": {
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v3.3.0-alpha.2/PortFinder_3.3.0-alpha.2_arm64-setup.exe",
+            "hash": "ad71f6a0c03ddbcc9021c62191f3dfb1bb3c32a851134e0c894699cff6303fb9"
+        }
+    },
+    "installer": {
+        "script": [
+            "Start-Process -Wait -FilePath \"$dir\\$fname\" -ArgumentList @('/S', \"/D=$dir\")",
+            "Remove-Item \"$dir\\$fname\" -Force"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
+        ]
+    },
+    "bin": [
+        ["PortFinder.exe", "portfinder-alpha"]
+    ],
+    "shortcuts": [
+        ["PortFinder.exe", "PortFinder Alpha"]
+    ],
+    "checkver": {
+        "url": "https://github.com/packetThrower/PortFinder/releases.atom",
+        "regex": "v(\\d+\\.\\d+\\.\\d+-[\\w.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/packetThrower/PortFinder/releases/download/v$version/PortFinder_$version_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/packetThrower/PortFinder/releases/download/v$version/PortFinder_$version_arm64-setup.exe"
+            }
+        }
+    },
+    "notes": [
+        "PortFinder Alpha is a pre-release. Installs alongside the stable",
+        "`portfinder` manifest if you have it; CLI is exposed as",
+        "`portfinder-alpha` and the Start menu shortcut is",
+        "`PortFinder Alpha`.",
+        "",
+        "Packet capture on Windows still requires Npcap. Get it from",
+        "https://npcap.com/#download and tick",
+        "'Allow non-administrators to capture' during install."
+    ]
+}
