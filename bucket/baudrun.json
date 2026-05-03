@@ -1,16 +1,16 @@
 {
-    "version": "0.9.2",
+    "version": "0.9.3",
     "description": "Cross-platform serial terminal for network devices",
     "homepage": "https://github.com/packetThrower/Baudrun",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.2/Baudrun_0.9.2_x64-setup.exe",
-            "hash": "5bbe8b17ca659ce7ccc69ba2d2f58aba438d245aed0c82ee5b39bdde657c05a4"
+            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.3/Baudrun_0.9.3_x64-setup.exe",
+            "hash": "b5f982be86debc1ca3389e9bdb9eca7a1d4b665d724ac0ef790b2880476dcc30"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.2/Baudrun_0.9.2_arm64-setup.exe",
-            "hash": "7d6196afbdc429cf5c42a5cb1a778efb83f69d03118b1e5b520e2d4b478715b1"
+            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.3/Baudrun_0.9.3_arm64-setup.exe",
+            "hash": "b7dff3baef68e995792bf6ab15a8aeedbc68d3b88e83edf8f82a10571b11d202"
         }
     },
     "installer": {
@@ -20,9 +20,7 @@
         ]
     },
     "uninstaller": {
-        "script": [
-            "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
-        ]
+        "script": "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
     },
     "bin": "Baudrun.exe",
     "shortcuts": [
