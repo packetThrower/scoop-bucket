@@ -19,6 +19,16 @@ ship under the same internal app identifier.
 
 ## Install
 
+Scoop needs git to fetch and update third-party buckets. If your
+fresh Scoop install doesn't have it yet, run this first:
+
+```powershell
+scoop install git
+```
+
+(Scoop fails fast with `ERROR Git is required for buckets.` if you
+skip this — same fix.)
+
 Add the bucket once:
 
 ```powershell
