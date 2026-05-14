@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.7/Baudrun_0.9.7_x64-setup.exe",
-            "hash": "277100b84f5952842c063895cb27339adfaaba6df92dd04992dceb46524932d4"
+            "hash": "a6af13a9dd438877c9bddcdce05db3a1942d423da0b14860ca9adc0d5928ae32"
         },
         "arm64": {
             "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.9.7/Baudrun_0.9.7_arm64-setup.exe",
-            "hash": "054e7287d2d46563e16a379a13c2e9204ff2dea156faab222b369e33c4654368"
+            "hash": "d42bd695619ba3d5620a259e261906165211c087d730a51fae3c97a41c852d58"
         }
     },
     "installer": {
