@@ -2,7 +2,7 @@
     "version": "3.3.0-alpha.2",
     "description": "Network switch port discovery via CDP / LLDP / MNDP (pre-release channel)",
     "homepage": "https://github.com/packetThrower/PortFinder",
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/packetThrower/PortFinder/releases/download/v3.3.0-alpha.2/PortFinder_3.3.0-alpha.2_x64-setup.exe",
