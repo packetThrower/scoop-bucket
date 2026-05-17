@@ -1,16 +1,16 @@
 {
-    "version": "4.0.0-alpha.3",
+    "version": "4.0.0-alpha.4",
     "description": "Network switch port discovery via CDP / LLDP / MNDP (pre-release channel)",
     "homepage": "https://github.com/packetThrower/PortFinder",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.0.0-alpha.3/PortFinder_4.0.0-alpha.3_x64-setup.exe",
-            "hash": "0ccb9ca7095ff4bf4d04b7ff7d6d79ed8a64d423064cb36b5f5e9c606080778e"
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.0.0-alpha.4/PortFinder_4.0.0-alpha.4_x64-setup.exe",
+            "hash": "e6bda209a1a8ee6c01f34efa07f69293712d671752354c4849beb940b69c1943"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.0.0-alpha.3/PortFinder_4.0.0-alpha.3_arm64-setup.exe",
-            "hash": "c59ab9a2ed246831dc77184808f6859fe3ed5e03b98b79f789da4323757b3bb8"
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.0.0-alpha.4/PortFinder_4.0.0-alpha.4_arm64-setup.exe",
+            "hash": "4ade0589b126b770452f380d7aa755046f5c92a7714bcb5a4823f496e7d9a449"
         }
     },
     "installer": {
@@ -20,19 +20,15 @@
         ]
     },
     "uninstaller": {
-        "script": "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
+        "script": [
+            "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
+        ]
     },
     "bin": [
-        [
-            "PortFinder.exe",
-            "portfinder-alpha"
-        ]
+        ["PortFinder.exe", "portfinder-alpha"]
     ],
     "shortcuts": [
-        [
-            "PortFinder.exe",
-            "PortFinder Alpha"
-        ]
+        ["PortFinder.exe", "PortFinder Alpha"]
     ],
     "checkver": {
         "url": "https://github.com/packetThrower/PortFinder/releases.atom",
