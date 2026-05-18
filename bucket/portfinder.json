@@ -1,16 +1,16 @@
 {
-    "version": "3.2.0",
+    "version": "4.0.0",
     "description": "Network switch port discovery via CDP / LLDP / MNDP",
     "homepage": "https://github.com/packetThrower/PortFinder",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/PortFinder/releases/download/v3.2.0/PortFinder_3.2.0_x64-setup.exe",
-            "hash": "cf60caf450644638a6aff22ce9ad562261ebe4fbadb09789984f9ca521601cb6"
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.0.0/PortFinder_4.0.0_x64-setup.exe",
+            "hash": "dda8086cadd9e47c0188137a1acb720b0a87450ffa224cd437534f7a45737631"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/PortFinder/releases/download/v3.2.0/PortFinder_3.2.0_arm64-setup.exe",
-            "hash": "b3426343ce80e1eafdde5d7f316c59a25d47debc32dcc66f2e343bc6cfc594bc"
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.0.0/PortFinder_4.0.0_arm64-setup.exe",
+            "hash": "c0cf378675342b64b6e33d73e90fdb0d14db1494aa5aea0edec90ae00b476448"
         }
     },
     "installer": {
@@ -24,12 +24,11 @@
             "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
         ]
     },
-    "bin": "PortFinder.exe",
+    "bin": [
+        ["portfinder-cli.exe", "portfinder"]
+    ],
     "shortcuts": [
-        [
-            "PortFinder.exe",
-            "PortFinder"
-        ]
+        ["PortFinder.exe", "PortFinder"]
     ],
     "checkver": "github",
     "autoupdate": {
