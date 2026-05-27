@@ -1,0 +1,49 @@
+{
+    "version": "0.4.0",
+    "description": "Cross-platform CLI/GUI flash programmer for the CH341A USB SPI/I²C interface",
+    "homepage": "https://github.com/packetThrower/etch341",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/packetThrower/etch341/releases/download/v0.4.0/etch341-0.4.0-amd64-windows-setup.exe",
+            "hash": "02fb28e542fcf56319824797da938066178d34671c841b0bdaca56547c66754a"
+        },
+        "arm64": {
+            "url": "https://github.com/packetThrower/etch341/releases/download/v0.4.0/etch341-0.4.0-arm64-windows-setup.exe",
+            "hash": "2274d175d3f291d0bae115d1f658298aa1ddcffed4017e349d2bbd5f31c7c134"
+        }
+    },
+    "installer": {
+        "script": [
+            "Start-Process -Wait -FilePath \"$dir\\$fname\" -ArgumentList @('/S', \"/D=$dir\")",
+            "Remove-Item \"$dir\\$fname\" -Force"
+        ]
+    },
+    "uninstaller": {
+        "script": "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
+    },
+    "bin": "etch341.exe",
+    "shortcuts": [
+        [
+            "etch341.exe",
+            "etch341"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/packetThrower/etch341/releases/download/v$version/etch341-$version-amd64-windows-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/packetThrower/etch341/releases/download/v$version/etch341-$version-arm64-windows-setup.exe"
+            }
+        }
+    },
+    "notes": [
+        "Windows needs a one-time WinUSB driver bind for the CH341A device.",
+        "Run Zadig (https://zadig.akeo.ie/), pick 'CH341A USB' from the device",
+        "list, choose 'WinUSB', and click Replace Driver. Without this step",
+        "etch341 detect / read / write report 'DeviceNotFound'."
+    ]
+}
