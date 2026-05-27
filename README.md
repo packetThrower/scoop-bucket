@@ -11,6 +11,7 @@ projects.
 | [`portfinder-prerelease`](bucket/portfinder-prerelease.json) | pre-release | Same app, alpha / beta / rc channel. Coexists with stable. |
 | [`baudrun`](bucket/baudrun.json) | stable | Cross-platform serial terminal for network devices. [Source](https://github.com/packetThrower/Baudrun). |
 | [`baudrun-prerelease`](bucket/baudrun-prerelease.json) | pre-release | Same app, alpha / beta / rc channel. Coexists with stable. |
+| [`etch341`](bucket/etch341.json) | stable | CLI/GUI flash programmer for the CH341A USB SPI/I²C interface. [Source](https://github.com/packetThrower/etch341). |
 
 Stable and pre-release for either project coexist — install one,
 both, or neither. State is shared between channels (preferences,
@@ -76,6 +77,42 @@ vendor driver; others work out of the box via Baudrun's bundled
 libusb backend. See the support matrix at
 [docs/ADAPTERS.md](https://github.com/packetThrower/Baudrun/blob/main/docs/ADAPTERS.md).
 
+### etch341
+
+```powershell
+scoop install etch341
+```
+
+Stable-only — no pre-release channel. Puts `etch341` on your
+`PATH` and creates an `etch341` Start menu shortcut. The same
+binary runs as the GUI when launched without args and as the CLI
+when given a subcommand:
+
+```powershell
+etch341 detect                       # JEDEC ID + chip lookup
+etch341 read -o bios.bin             # dump entire chip
+etch341 sfdp                         # decoded JESD216 table
+etch341 sr                           # SR1/SR2/SR3 decoded
+etch341 write -i bios.bin            # erase + write + verify
+```
+
+**Windows USB driver setup is required once per machine.** Windows
+doesn't ship a generic userspace USB driver, so the CH341A enumerates
+either as an unknown device or gets claimed by a vendor serial driver.
+Either way libusb can't open it and `etch341 detect` reports
+`DeviceNotFound`. The one-time fix is to bind the WinUSB generic
+driver to the device:
+
+1. Plug in the CH341A.
+2. Run [Zadig](https://zadig.akeo.ie/) (~600 KB, no installer).
+3. In Zadig's `Options` menu, enable `List All Devices`.
+4. Select the entry with VID `0x1A86` / PID `0x5512`, choose
+   **WinUSB** in the driver dropdown, click `Install Driver`.
+
+Same install lives at the project's [own install
+docs](https://packetthrower.github.io/etch341/install/) with
+screenshots if Zadig's UI is unfamiliar.
+
 ## Update
 
 ```powershell
@@ -84,6 +121,7 @@ scoop update portfinder
 scoop update portfinder-prerelease    # if installed
 scoop update baudrun
 scoop update baudrun-prerelease       # if installed
+scoop update etch341
 ```
 
 ## Uninstall
@@ -91,6 +129,7 @@ scoop update baudrun-prerelease       # if installed
 ```powershell
 scoop uninstall portfinder portfinder-prerelease
 scoop uninstall baudrun baudrun-prerelease
+scoop uninstall etch341
 ```
 
 ## Reporting issues
@@ -98,7 +137,8 @@ scoop uninstall baudrun baudrun-prerelease
 Bucket bugs (install fails, wrong hash, broken autoupdate): file in
 this repo. App bugs: file at the project's own repo
 ([PortFinder](https://github.com/packetThrower/PortFinder/issues),
-[Baudrun](https://github.com/packetThrower/Baudrun/issues)).
+[Baudrun](https://github.com/packetThrower/Baudrun/issues),
+[etch341](https://github.com/packetThrower/etch341/issues)).
 
 ## Auto-update
 
