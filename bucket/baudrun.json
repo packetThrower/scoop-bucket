@@ -1,16 +1,16 @@
 {
-    "version": "0.12.4",
+    "version": "0.13.0",
     "description": "Cross-platform serial terminal for network devices",
     "homepage": "https://github.com/packetThrower/Baudrun",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.12.4/Baudrun_0.12.4_x64-setup.exe",
-            "hash": "36d1895cf8401f0ac916dff16579f80630ce215240cdbf64aa51323ee4f0c43a"
+            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.13.0/Baudrun_0.13.0_x64-setup.exe",
+            "hash": "cf8c39aef4418a45c16fb45352b0d09d1e8e26b86437106b861625557ad68c86"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.12.4/Baudrun_0.12.4_arm64-setup.exe",
-            "hash": "851964eb5237a45a2866c5acd60f75a559ebca67a565766a400b7d91309423c4"
+            "url": "https://github.com/packetThrower/Baudrun/releases/download/v0.13.0/Baudrun_0.13.0_arm64-setup.exe",
+            "hash": "97170e860d8c79cbe6e36586e9274a74f61ef65d705b55512e6aeb1bd806a2aa"
         }
     },
     "installer": {

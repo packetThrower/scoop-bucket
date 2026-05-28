@@ -1,16 +1,16 @@
 {
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Cross-platform CLI/GUI flash programmer for the CH341A USB SPI/I²C interface",
     "homepage": "https://github.com/packetThrower/etch341",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/etch341/releases/download/v0.4.0/etch341-0.4.0-amd64-windows-setup.exe",
-            "hash": "02fb28e542fcf56319824797da938066178d34671c841b0bdaca56547c66754a"
+            "url": "https://github.com/packetThrower/etch341/releases/download/v0.4.1/etch341-0.4.1-amd64-windows-setup.exe",
+            "hash": "19608c395873eb4fddca5372fc3b7a00f3f13b0655fa863e3d041642408cd007"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/etch341/releases/download/v0.4.0/etch341-0.4.0-arm64-windows-setup.exe",
-            "hash": "2274d175d3f291d0bae115d1f658298aa1ddcffed4017e349d2bbd5f31c7c134"
+            "url": "https://github.com/packetThrower/etch341/releases/download/v0.4.1/etch341-0.4.1-arm64-windows-setup.exe",
+            "hash": "648e5f9af1cb07cb11a79ea6a8a62718a0e66f493eb2418bf4604bc38b49b04a"
         }
     },
     "installer": {
