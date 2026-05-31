@@ -12,6 +12,7 @@ projects.
 | [`baudrun`](bucket/baudrun.json) | stable | Cross-platform serial terminal for network devices. [Source](https://github.com/packetThrower/Baudrun). |
 | [`baudrun-prerelease`](bucket/baudrun-prerelease.json) | pre-release | Same app, alpha / beta / rc channel. Coexists with stable. |
 | [`etch341`](bucket/etch341.json) | stable | CLI/GUI flash programmer for the CH341A USB SPI/I²C interface. [Source](https://github.com/packetThrower/etch341). |
+| [`etch341-prerelease`](bucket/etch341-prerelease.json) | pre-release | Same app, alpha / beta / rc channel. Coexists with stable. |
 
 Stable and pre-release for either project coexist — install one,
 both, or neither. State is shared between channels (preferences,
@@ -81,12 +82,14 @@ libusb backend. See the support matrix at
 
 ```powershell
 scoop install etch341
+# or pre-release channel:
+scoop install etch341-prerelease
 ```
 
-Stable-only — no pre-release channel. Puts `etch341` on your
-`PATH` and creates an `etch341` Start menu shortcut. The same
-binary runs as the GUI when launched without args and as the CLI
-when given a subcommand:
+Puts `etch341` on your `PATH` and creates an `etch341` Start menu
+shortcut (the pre-release shim is `etch341-alpha` with shortcut
+`etch341 Alpha`, so the two coexist). The same binary runs as the GUI
+when launched without args and as the CLI when given a subcommand:
 
 ```powershell
 etch341 detect                       # JEDEC ID + chip lookup
@@ -122,6 +125,7 @@ scoop update portfinder-prerelease    # if installed
 scoop update baudrun
 scoop update baudrun-prerelease       # if installed
 scoop update etch341
+scoop update etch341-prerelease        # if installed
 ```
 
 ## Uninstall
@@ -129,7 +133,7 @@ scoop update etch341
 ```powershell
 scoop uninstall portfinder portfinder-prerelease
 scoop uninstall baudrun baudrun-prerelease
-scoop uninstall etch341
+scoop uninstall etch341 etch341-prerelease
 ```
 
 ## Reporting issues
