@@ -1,16 +1,16 @@
 {
-    "version": "4.1.0-beta.2",
+    "version": "4.1.3-beta.1",
     "description": "Network switch port discovery via CDP / LLDP / MNDP (pre-release channel)",
     "homepage": "https://github.com/packetThrower/PortFinder",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.1.0-beta.2/PortFinder_4.1.0-beta.2_x64-setup.exe",
-            "hash": "1597d6c8e2ba148f9283654ae8d735bf3170bff44633b35bea5e7d48e3139e90"
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.1.3-beta.1/PortFinder_4.1.3-beta.1_x64-setup.exe",
+            "hash": "e795636833e35ed8824d0042fa392b4751b00a2bbcd43ef8fc2add1da0305a73"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.1.0-beta.2/PortFinder_4.1.0-beta.2_arm64-setup.exe",
-            "hash": "12f938c42b82e29942d6acc5c6f60fb80aec5cc55d06e1d0c690f7c1876fae63"
+            "url": "https://github.com/packetThrower/PortFinder/releases/download/v4.1.3-beta.1/PortFinder_4.1.3-beta.1_arm64-setup.exe",
+            "hash": "2780554e0f70292d15c30d60cdfaa58884aaa432422e4a2bc90d49dc98d1469b"
         }
     },
     "installer": {
