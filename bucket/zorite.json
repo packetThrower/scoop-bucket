@@ -1,0 +1,43 @@
+{
+    "version": "0.1.0",
+    "description": "Local-first daily-journal and outliner note app (Logseq-style)",
+    "homepage": "https://github.com/packetThrower/zorite",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.1.0/zorite_0.1.0_x64-setup.exe",
+            "hash": "249cf597a860a8f0e410778ce1fd712444d63e119e1c0e86111efb0849b7c269"
+        },
+        "arm64": {
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.1.0/zorite_0.1.0_arm64-setup.exe",
+            "hash": "5e30bfec74b2a8e65e0c6abd85528fcf4d5543968f061a034cf1207f7b47d179"
+        }
+    },
+    "installer": {
+        "script": [
+            "Start-Process -Wait -FilePath \"$dir\\$fname\" -ArgumentList @('/S', \"/D=$dir\")",
+            "Remove-Item \"$dir\\$fname\" -Force"
+        ]
+    },
+    "uninstaller": {
+        "script": "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\uninstall.exe\" -ArgumentList '/S' }"
+    },
+    "bin": "Zorite.exe",
+    "shortcuts": [
+        [
+            "Zorite.exe",
+            "Zorite"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/packetThrower/zorite/releases/download/v$version/zorite_$version_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/packetThrower/zorite/releases/download/v$version/zorite_$version_arm64-setup.exe"
+            }
+        }
+    }
+}
