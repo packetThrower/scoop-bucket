@@ -1,16 +1,16 @@
 {
-    "version": "0.11.0",
+    "version": "0.12.0",
     "description": "Local-first daily-journal and outliner note app (Logseq-style)",
     "homepage": "https://github.com/packetThrower/zorite",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/zorite/releases/download/v0.11.0/zorite_0.11.0_x64-setup.exe",
-            "hash": "840adfb2da8ba9dc09eb03932b092ca785c61ab6d18b6a3ee9d30f1d0d79d41f"
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.12.0/zorite_0.12.0_x64-setup.exe",
+            "hash": "f7822eca2fd4a2f9eda480f88b166233aea3c598a4fdffc5569010d4d9a3e5e8"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/zorite/releases/download/v0.11.0/zorite_0.11.0_arm64-setup.exe",
-            "hash": "ae53b6e93a412922552ae553a72dc4828aee89922fcb428934d46f093b11b12b"
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.12.0/zorite_0.12.0_arm64-setup.exe",
+            "hash": "7e4b4c7c2a8cab658dea39a70a9f297cde3cf33a0fecbb48eab68fafdf216139"
         }
     },
     "installer": {
