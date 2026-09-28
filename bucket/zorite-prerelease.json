@@ -1,16 +1,16 @@
 {
-    "version": "0.11.0-beta.1",
+    "version": "0.12.1-beta.1",
     "description": "Local-first daily-journal and outliner note app (pre-release channel)",
     "homepage": "https://github.com/packetThrower/zorite",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/zorite/releases/download/v0.11.0-beta.1/zorite_0.11.0-beta.1_x64-setup.exe",
-            "hash": "ae9f513756c847751d403db1feb8e12468dc178a1db8d51ef8108067a5337dc7"
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.12.1-beta.1/zorite_0.12.1-beta.1_x64-setup.exe",
+            "hash": "c5b8d85b30070ed8aa6ad68fdd18bf1f627266804fb72c4d74ecd966804967ad"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/zorite/releases/download/v0.11.0-beta.1/zorite_0.11.0-beta.1_arm64-setup.exe",
-            "hash": "da4ef8897a9bc37d719eefd425c374147bb5aa5144f72efbbed1199ca2de2558"
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.12.1-beta.1/zorite_0.12.1-beta.1_arm64-setup.exe",
+            "hash": "459c2c5f4b30bbbb321ee98d75db03130b1e02ba51d784e676e51bc03e732a01"
         }
     },
     "installer": {
@@ -51,7 +51,6 @@
     "notes": [
         "Zorite Alpha is the pre-release channel. Installs alongside the stable",
         "`zorite` manifest; its shim is exposed as `zorite-alpha` and the Start",
-        "menu shortcut is `Zorite Alpha`. Currently parked on v0.1.0 until the",
-        "next pre-release ships."
+        "menu shortcut is `Zorite Alpha`."
     ]
 }
