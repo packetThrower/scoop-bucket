@@ -1,16 +1,16 @@
 {
-    "version": "0.15.0-beta.3",
+    "version": "0.15.0-beta.4",
     "description": "Local-first daily-journal and outliner note app (pre-release channel)",
     "homepage": "https://github.com/packetThrower/zorite",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/packetThrower/zorite/releases/download/v0.15.0-beta.3/zorite_0.15.0-beta.3_x64-setup.exe",
-            "hash": "dea1603117d7abdb8ebb049b3f1e2680a1362b0ec0343a996e1e619bf1046453"
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.15.0-beta.4/zorite_0.15.0-beta.4_x64-setup.exe",
+            "hash": "52649c3de5cb73ebd0c3bc42747f226395a8947bc160085c06b16bc69519881a"
         },
         "arm64": {
-            "url": "https://github.com/packetThrower/zorite/releases/download/v0.15.0-beta.3/zorite_0.15.0-beta.3_arm64-setup.exe",
-            "hash": "5467a5afca7fb7c40a23a87fee8c9db9b1cf20788433fc848446efbcc546ec3a"
+            "url": "https://github.com/packetThrower/zorite/releases/download/v0.15.0-beta.4/zorite_0.15.0-beta.4_arm64-setup.exe",
+            "hash": "19c57f477a07a0192d58eb967163ff47a48ef330112e4cb315de3f64cd930734"
         }
     },
     "installer": {
